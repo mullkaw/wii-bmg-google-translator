@@ -1,0 +1,8 @@
+.vscode/
+__pycache__/
+temp/
+*.json
+*.txt
+*.bmg
+*.ini
+*.arc
