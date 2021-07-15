@@ -26,6 +26,3 @@ The `config.ini` file is where the settings for the program are. There is one se
 
 **target_languages**: This the sequence of languages that the BMG is translated to. These values are comma-separated and just like the source language value, they are the form of an [ISO 639-1 language code](https://www.loc.gov/standards/iso639-2/php/code_list.php). Trying to translate from any one language into itself is not allowed.
 > For example, a value of `es, th, zu, en` tells the program to first translate from the source language into Spanish, then from Spanish to Thai, then from Thai to Zulu, and finally from Zulu to English
-
-
----
