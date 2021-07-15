@@ -1,8 +1,12 @@
 .vscode/
 __pycache__/
 temp/
-*.json
-*.txt
+
+*.arc
+*.bat
 *.bmg
 *.ini
-*.arc
+*.json
+*.sh
+*.szs
+*.txt
