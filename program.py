@@ -1,9 +1,11 @@
-from distutils import spawn
-import subprocess as spc
-from configparser import ConfigParser
-from iso639 import languages
 import os
 import sys
+import subprocess as spc
+from configparser import ConfigParser
+from distutils import spawn
+
+from iso639 import languages
+
 from wiibmg import *
 from chain_translate import *
 
