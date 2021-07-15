@@ -4,7 +4,6 @@ import re
 magic = '#BMG'
 
 # regular expression strings for parsing bmg text files
-# NOTE this assumes the hex values always use uppercase letters
 parameter_re_str = r"@(?P<name>[\S]+)[\s]*=[\s]*(?P<value>[\S]+)"
 attribute_re_str = r"\[[,0-9A-Fa-f/]+\]"
 attribute32_re_str = r"|0x[0-9A-Fa-f]+"
@@ -118,12 +117,13 @@ class Message:
         # re-insert the escape sequences into the text
         if self.text:
             try:
-                f_text = self.text.format(*self.escapes, *space_lst) if self.escapes else self.text.format(*space_lst)
-            except ValueError:
                 f_text = re.sub(r"(?<![\{])\{(?![\{\}])", "{{", self.text)
                 f_text = re.sub(r"(?<![\{\}])\}(?![\}])", "}}", f_text)
+                f_text = re.sub(r"\{\}\}|\{\{\}", "{}", f_text)
                 f_text = f_text.format(*self.escapes, *space_lst) if self.escapes else f_text.format(*space_lst)
-        
+            except:
+                f_text = self.text
+
         formats = {
             None: ">>>ERROR: NO FORMAT FOUND", # should be unreachable
             1: f'{self.mid} ~ {self.attrib32}',

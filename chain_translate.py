@@ -36,5 +36,5 @@ def do_translations(config, text):
 
         # this iteration's target language is the next iteration's source
         source = target
-
+    
     return text
