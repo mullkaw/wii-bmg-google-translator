@@ -4,7 +4,7 @@ A python program that interfaces with [Google's Translate API](https://github.co
 
 Do note that machine translation doesn't purport to be all too accurate, mainly due to the lack of linguistic context among other things. The purpose of this program isn't for accurate translation though, inaccuracies are welcome and might even be encouraged!
 
-# Usage
+## Usage
 This program is written in Python 3. You can run like this:
 ```bat
 program.py INPUTFILE.EXT
@@ -15,7 +15,7 @@ After the translation process is done, a file called `INPUTFILE-translated.bmg` 
 
 > **The path to wbmgt (Wiimms BMG Tool) must be on your computer's path variable in order for the program to work.**
 
-# Configuration
+## Configuration
 
 The `config.ini` file is where the settings for the program are. There is one section [PARAMETERS] with the following values under it:
 
