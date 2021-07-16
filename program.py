@@ -33,7 +33,7 @@ for arg in sys.argv[1:]:
     # if it's a .txt file then we assume it is a BMG text file and dont decode
     if 'txt' not in ext:
         # https://szs.wiimm.de/wbmgt/cmd-decode.html
-        command = f"wbmgt decode --single-line --dest {arg_no_ext}.txt {arg}"
+        command = f'wbmgt decode --single-line --dest "{arg_no_ext}.txt" "{arg}"'
         spc.run(command).check_returncode()
         print()
 
@@ -69,7 +69,7 @@ for arg in sys.argv[1:]:
         fo.write(str(wii_bmg))
 
     # https://szs.wiimm.de/wbmgt/cmd-encode.html
-    command = f"wbmgt encode {arg_no_ext}-translated.txt"
+    command = f'wbmgt encode "{arg_no_ext}-translated.txt"'
     spc.run(command).check_returncode()
     print()
 
